@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product Categories</title>
+
+    <link href="https://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <script src="https://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
+
+    <style>
+
+        .page-header {
+            text-align: center;
+            color: #2c2c2c;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .category-card {
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .category-item {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 200px;
+            transition: all 0.3s ease;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            background: #404040;
+        }
+
+        .category-card:hover .category-item {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border-color: #333;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 30px 20px 0;
+            z-index: 1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .category-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        .category-btn:hover {
+            background: white;
+            color: #2c2c2c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>Product Categories</h1>
+        <p>Browse through our diverse range of products</p>
+    </div>
+
+    <div class="row">
+        <!-- Row 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Bakery</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">BBQ</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Beer Wine</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Cosmetics</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Dairy</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Frozen Foods</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Grocery</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Juice & Cocktail</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Meat</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Medicine</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Non Food</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Online Lotto</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Prepared Food</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Produce</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Scratch Offs</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Seafood</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Soft Drinks</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Energy Drinks</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Tobacco</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Hot Food</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Ice Cream</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Fashion Wear</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Kitchen</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Liquor</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Row 7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Frozen Yogurt</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 category-card">
+            <div class="category-item">
+                <h3 class="category-title">Department Not On File</h3>
+                <button class="btn category-btn">View More</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
